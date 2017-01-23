@@ -5,30 +5,40 @@ An example web service in C# - works in .NET/Xamarin/Mono on Windows, Mac & Linu
 
 # C# Web Service Example
 
-This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped service (as well as simple XML/JSON over REST).
+This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped service, as well as simple XML/JSON over REST.
 
 It's written in written in C# (using Mono/Xamarin Studio), the services are self documenting and it interoperates really with well with other languages (PHP, Ruby, Java, JavaScript, etc). In languages like Java and PHP it works great with the built in SOAP client.
 
-It's cross platform and runs on Windows, Mac, Linux and other UNIX platforms. The class libraries used can be shared between desktop, server, mobile (including iOS and Android) and console platforms.
+It's cross platform and runs on Windows, Mac, Linux and other UNIX platforms. The class libraries used can be shared between desktop, server, mobile (iOS and Android) and console platforms.
 
-**Note:** The format for the SOAP responses is the (excellent) **SOAP Document/Literal Wrapped** format and not an (evil) **SOAP RPC** variant.
+Note, when we talk about SOAP here I'm referring to the (excellent, highly interoperable) **SOAP Document/Literal Wrapped** format and not an the long deprecated (and rightly maligned) **SOAP RPC** format which is quite a different format.
 
-Despite the latter being deprecated for a decade it's still what people tend to think of when someone mentions SOAP. This misunderstanding tends to induce OMGWATNOES responses in people who've previously encountered SOAP RPC, which is a shame as they are missing out (and probably writing a lot of boiler plate code they wouldn't have to if they were using C#).
+Despite the latter being deprecated for over a decade it's still often what people tend to think of when someone mentions SOAP as it was for many their first and only exposure to it. This misunderstanding tends to induce negative responses in people who've previously encountered SOAP RPC, which is a shame as they are missing out - and they probably writing a lot of boiler plate code they wouldn't have to if they were using C#.
 
-You can also enable JSON over REST, although (as with XML over REST) you won't get the benifits of automagic server-to-client exception handling and type safety. As with most things, it's very dependant on the use case at hand. Sometimes these things matter, sometimes they don't.
+You can also enable JSON over REST, although (as with simple XML over REST) you won't get the benifits of automagic server-to-client exception handling and type safety. As with most things, it's very dependant on the use case at hand as to if you need that level of robustness in error handling and type checking in your client to server communications.
 
 ##What's the purpose of this example?
 
-I've used C# and Xamarin/Mono to write and deploy services on Mac, Windows, Linux, BSD and Solaris while at TalkTalk, AOL and UK Online.
+I've used C# and Xamarin/Mono to write and deploy services on Mac, Windows, Linux, BSD and Solaris at several jobs in the past - including while working at the BBC, AOL and Sky, which were all mixed platform environments.
 
-I've consumed these services from PHP, Perl, browser based JavaScript, desktop apps in C# and C++, xojo (formerly RealStudio) and other scripting languages.
+I've consumed these services from C#, C++, Java, JavaScript, PHP, Perl, C++ in xojo (formerly RealStudio) and other scripting languages.
 
-Being a fan of the platform - and as someone sad to see it maligned through misunderstanding and by people who've only ever encountered badly mangled .NET services - I thought I'd get round to uploading an example of how simple it is, so I have something to point people at.
+Many if not most of the deployed .NET services I've seen in production have been pretty badly managled - even though it's quite straight forward to get it right, especially if you are using something like Visual Studio to create them. I thought I'd get round to uploading an example it is to write a good service as a reference point.
 
-I've included some examples of sane ways to handle returning objects and input validation to create WSI compliant responses and to show how to handle errors. I've no idea why people manage to return objects incorrectly via SOAP given how easy it is to get right, but it's a common problem.
+I've included some examples of sane ways to handle returning complex objects, how to do input validation, how to create WSI compliant responses and some examples of how best to handle errors.
 
-If you're doing cross platform development and you're not using Xamarin/Mono you might be missing out.
+If you're doing cross platform development for web services - especially for robust or enterprise web service services - and you're not using Xamarin/Mono you might be missing out.
 
-The Xamarin Studio IDE is pretty awesome these days and well worth checking out.
+##Alternatives
 
--- feedback via me@iaincollins.com, http://twitter.com/iaincollins welcome, as are pull requests!
+Both http://jsonapi.org and http://json-schema.org can be combined to similarly define services and APIs that use JSON, although (sadly) they are not quite as complete in scope and there are currently no tools which create generate auto-documenting, robust services from code in the same manner (though there is software that does some of the work).
+
+In Java you can use the Java API for XML Web Services (JAX-WS) to create SOAP services. Other alternatives for Java include Apache CXF Apache CXF. Currenetly all of these (and simlar) options for Java have their own quirks and compatiblity isusues that cause interoperability problems when consuming them from different clients.
+
+Even in 2017, SOAP Document/Literal Wrapped remains best supported on C# - thanks to Microsoft, the first initial proponents of the format. Using C# generates clients that are highly interoperable with other platforms and languages. Remarkably, there isn't anything that's quite comparible for building services (using XML or JSON) in any other language.
+
+As someone who doesn't use C# day to day this is frustrating, but that's where we are.
+
+##Feedback
+
+Feedback via me@iaincollins.com, http://twitter.com/iaincollins welcome, as are pull requests.
