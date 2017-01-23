@@ -9,21 +9,17 @@ Note, when we talk about SOAP here it referees to the self documeting and highly
 
 This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped web service.
 
-You can also use expose the same methods as simple XML/JSON over REST.
-
 Web services generated on Mono all have complete automatically documentation with example usage exposed as web pages on the server along with interactive examples (where you can submit structured objects via an HTML form and view the responses) and of course service descriptions (WSDL files) and URL endpoints are generated for you. The code used to create services on Mono runs without modification on .NET (although services built for .NET may not run with out modification on Mono).
 
 This example is in written in C#, using Mono/Xamarin Studio IDE (available for Windows, Mac and Linux). The services are self documenting and interoperate really with well with other languages (Java, C+, PHP, Ruby, JavaScript, etc). In languages like Java and PHP it works great with the built in SOAP client - on platforms that don't have a SOAP client you can use simple HTTP/REST calls.
 
 It's cross platform and runs on Windows, Mac, Linux and other UNIX platforms. The class libraries used can be shared between desktop, server, mobile (iOS and Android) and console platforms.
 
-You can also enable JSON over REST with web methods in C#, although (as with simple XML over REST) you won't get the benifits of automagic server-to-client exception handling or the full benifits of type safety. As with most things, it's very dependant on the use case at hand as to if you need that level of robustness in error handling and type checking in your client to server communications.
+You can also use JSON or simple XML with REST for these methods, which is great for simple services - although then you don't get the benifits of automatic server-to-client exception propogation or the full benifits of type safety. As with most things, it's very dependant on the use case at hand as to if you need that level of robustness in error handling and type checking in your API.
 
 ##What's the purpose of this example?
 
-I've used C# and Xamarin/Mono to write and deploy services on Mac, Windows, Linux, BSD and Solaris at several jobs in the past - including while working at the BBC, AOL and Sky, which were all mixed platform environments.
-
-I've consumed these services from C#, C++, Java, JavaScript, PHP, Perl, C++ in xojo (formerly RealStudio) and other scripting languages.
+I've used C# and Xamarin/Mono to write and deploy services on Mac, Windows, Linux, BSD and Solaris at several jobs in the past - including while working at the BBC, AOL and Sky, which were all mixed platform environments. I've consumed these services from C#, C++, Java, JavaScript, PHP, Perl, C++ in xojo (formerly RealStudio) and other scripting languages.
 
 Many if not most of the deployed .NET services I've seen in production have been pretty badly managled - even though it's quite straight forward to get it right, especially if you are using something like Visual Studio to create them. I thought I'd get round to uploading an example it is to write a good service as a reference point.
 
