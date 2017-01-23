@@ -27,15 +27,15 @@ Many if not most of the deployed .NET services I've seen in production have been
 
 I've included some examples of sane ways to handle returning complex objects, how to do input validation, how to create WSI compliant responses and some examples of how best to handle errors.
 
-If you're doing cross platform development for web services - especially for robust or enterprise web service services - and you're not using Xamarin/Mono you might be missing out.
+As I update this for 2017, SOAP Document/Literal Wrapped still remains best supported on C# - largely thanks to Microsoft, the first initial proponents of the format and of course of C#. Using C# with .NET or Mono generates clients that are highly interoperable with other platforms and languages. Remarkably, there still isn't anything that's quite comparible for building services (using XML or JSON) in any other language.
+
+If you're doing cross platform development for web services - especially for robust or enterprise web service services - and you're not using Xamarin/Mono for them you might be missing out. It might not seem an obvious choice if your stack is normally something like Java, Node.js, Ruby, PHP or even Go or Rust, but if your work revolves around building well defined, type safe web services with robust exchange of data - especially passing objects between systems - then it's strongly worth considering as it's a remarkable platform.
 
 ##Alternatives
 
-Both http://jsonapi.org and http://json-schema.org can be combined to similarly define services and APIs that use JSON, although (sadly) they are not quite as complete in scope and there are currently no tools which create generate auto-documenting, robust services from code in the same manner (though there is software that does some of the work).
+Both [JSON API](http://jsonapi.org) and [JSON Schema](http://json-schema.org) can be combined to similarly define services and APIs that use JSON, although (sadly) they are not quite as complete in scope and there are currently no tools which create generate auto-documenting, robust services from code in the same manner (though there is software that does some of the work).
 
-In Java you can use the Java API for XML Web Services (JAX-WS) to create SOAP services. Other alternatives for Java include Apache CXF Apache CXF. Currenetly all of these (and simlar) options for Java have their own quirks and compatiblity isusues that cause interoperability problems when consuming them from different clients.
-
-Even in 2017, SOAP Document/Literal Wrapped remains best supported on C# - thanks to Microsoft, the first initial proponents of the format. Using C# generates clients that are highly interoperable with other platforms and languages. Remarkably, there isn't anything that's quite comparible for building services (using XML or JSON) in any other language.
+In Java you can use the [Java API for XML Web Services (JAX-WS)](https://jax-ws.java.net) to create SOAP services. Other alternatives for Java include [Apache CXF](https://cxf.apache.org) and [Apache Axis2](https://axis.apache.org/axis2/java/core/). Currently all of these (and simlar) options for Java have their own quirks and compatiblity isusues that cause interoperability problems when consuming them from different clients.
 
 As someone who doesn't use C# day to day this is frustrating, but that's where we are.
 
