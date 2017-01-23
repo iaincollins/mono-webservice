@@ -5,7 +5,9 @@ An example web service in C# - works in .NET/Xamarin/Mono on Windows, Mac & Linu
 
 # C# Web Service Example
 
-This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped service, as well as simple XML/JSON over REST.
+This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped web service.
+
+You can use expose the same services as simple XML/JSON over REST. In both cases web service APIs and WSDLs (service descriptions) are generate automatically from simple class and object descriptions.
 
 It's written in written in C# (using Mono/Xamarin Studio), the services are self documenting and it interoperates really with well with other languages (PHP, Ruby, Java, JavaScript, etc). In languages like Java and PHP it works great with the built in SOAP client.
 
