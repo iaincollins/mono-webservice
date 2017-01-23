@@ -41,4 +41,4 @@ As someone who doesn't use C# day to day this is frustrating, but that's where w
 
 ##Feedback
 
-Feedback via me@iaincollins.com, http://twitter.com/iaincollins welcome, as are pull requests.
+Feedback via me@iaincollins.com or via Twitter via [@iaincollins](http://twitter.com/iaincollins) is welcome, as are pull requests.
