@@ -3,21 +3,21 @@ mono-webservice
 
 An example web service in C# - works in .NET/Xamarin/Mono on Windows, Mac and Linux.
 
+Note, when we talk about SOAP here it referees to the self documeting and highly interoperable **SOAP Document/Literal Wrapped** format and not an the long deprecated and equally as long maligned **SOAP RPC** format, which is a different pragma.
+
 #C# Web Service Example
 
 This is an example of a cross platform web service that provides SOAP Document/Literal Wrapped web service.
 
-You can use expose the same methods as simple XML/JSON over REST. In both cases web service APIs and WSDLs (service descriptions) are generated automatically from simple class and object descriptions.
+You can also use expose the same methods as simple XML/JSON over REST.
 
-This is example is in written in C#, using Mono/Xamarin Studio IDE (available for Windows, Mac and Linux). The services are self documenting and interoperate really with well with other languages (Java, C+, PHP, Ruby, JavaScript, etc). In languages like Java and PHP it works great with the built in SOAP client - on platforms that don't have a SOAP client you can use simple HTTP/REST calls.
+Web services generated on Mono all have complete automatically documentation with example usage exposed as web pages on the server along with interactive examples (where you can submit structured objects via an HTML form and view the responses) and of course service descriptions (WSDL files) and URL endpoints are generated for you. The code used to create services on Mono runs without modification on .NET (although services built for .NET may not run with out modification on Mono).
+
+This example is in written in C#, using Mono/Xamarin Studio IDE (available for Windows, Mac and Linux). The services are self documenting and interoperate really with well with other languages (Java, C+, PHP, Ruby, JavaScript, etc). In languages like Java and PHP it works great with the built in SOAP client - on platforms that don't have a SOAP client you can use simple HTTP/REST calls.
 
 It's cross platform and runs on Windows, Mac, Linux and other UNIX platforms. The class libraries used can be shared between desktop, server, mobile (iOS and Android) and console platforms.
 
-Note, when we talk about SOAP here I'm referring to the (excellent, highly interoperable) **SOAP Document/Literal Wrapped** format and not an the long deprecated (and rightly maligned) **SOAP RPC** format which is quite a different format.
-
-Despite the latter being deprecated for over a decade it's still often what people tend to think of when someone mentions SOAP as it was for many their first and only exposure to SOAP. This misunderstanding tends to induce negative responses in people who've only previously encountered SOAP RPC.
-
-You can enable JSON over REST with web methods in C#, although (as with simple XML over REST) you won't get the benifits of automagic server-to-client exception handling and type safety. As with most things, it's very dependant on the use case at hand as to if you need that level of robustness in error handling and type checking in your client to server communications.
+You can also enable JSON over REST with web methods in C#, although (as with simple XML over REST) you won't get the benifits of automagic server-to-client exception handling or the full benifits of type safety. As with most things, it's very dependant on the use case at hand as to if you need that level of robustness in error handling and type checking in your client to server communications.
 
 ##What's the purpose of this example?
 
