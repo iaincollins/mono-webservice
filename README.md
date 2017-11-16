@@ -1,9 +1,8 @@
 # Web services in C#/Mono 
-===============
 
 An example web service in C# - works in .NET/Xamarin/Mono on Windows, Mac and Linux.
 
-Note, when we talk about SOAP here it referees to the self documeting and highly interoperable **SOAP Document/Literal Wrapped** format and not an the long deprecated and equally as long maligned **SOAP RPC** format, which is a different pragma.
+When this document mentions SOAP (Simple Object Access Protocol) it is referring to the self documeting and highly interoperable **SOAP Document/Literal Wrapped** format and not an the deprecated - and maligned - **SOAP RPC** format, which is a different pragma.
 
 ## C# Web Service Example
 
